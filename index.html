@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/6cca727381.js" crossorigin="anonymous"></script>
+    <title>내집꾸미기</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar_container">
+            <div class="navbar_logoAndList">
+                <i class="fa-solid fa-house navbar_logo">내집꾸미기</i>
+                <ul class="navbar_list">
+                    <li class="navbar_list_item">홈</li>
+                    <li class="navbar_list_item">온라인 집들이</li>
+                    <li class="navbar_list_item_active">스토어</li>
+                    <li class="navbar_list_item">전문가</li>
+                    <li class="navbar_list_item">시공 견적</li>
+                </ul>
+            </div>
+            <div class="navbar_btnBox">
+                <button class="navbar_btnBox_loginBtn">로그인</button>
+                <button class="navbar_btnBox_signInBtn">회원가입</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="searchBox">
+        <form>
+            <input type="text" id="searchBox" placeholder="검색어를 입력해주세요.">
+            <input type="text" style="display: none;">
+        </form>
+    </div>
+    <div class="main">
+        <section class="shop">
+            <h1 class="shop_header">모든 상품 리스트</h1>
+            <div class="shop_itemList"></div>
+        </section>
+        <section class="cart">
+            <h1 class="cart_header">장바구니</h1>
+            <div class="cart_cartBox">
+                <div class="cart_cartBox_dropArea">
+                    이 곳에 상품을 놓아주세요.
+                </div>
+                <div class="cart_cartBox_itemList"></div>
+                <span>total <span class="cart_cartBox_totalPrice">0</span>₩</span>
+                <button class="cart_cartBox_purchaseBtn">구매하기</button>
+            </div>
+            <div class="blackBackground">
+                <div class="purchase_modal">
+                    <button class="purchase_modal_cancelBtn">X</button>
+                    <h1>Thank you for your purchase!</h1>
+                    <h3>배송 정보를 전달 받을 연락처와 이메일을 입력해주세요.</h3>
+                    <form>
+                        <span>Email</span>
+                        <input type="email" id="emailInput" placeholder="이메일 주소를 입력해주세요.">
+                        <span>Phone Number</span>
+                        <input type="tel" id="tellInput" placeholder="연락처를 입력해주세요.">
+                    </form>
+                    <button class="purchase_modal_submitBtn">전송하기</button>
+                </div>
+                <div class="receiptContainer">
+                    <canvas id="receipt" width="600" height="600"></canvas>
+                    <button class="receiptBtn">닫기</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
